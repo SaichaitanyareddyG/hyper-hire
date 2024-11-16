@@ -20,7 +20,9 @@ body {
   font-family: 'Poppins', sans-serif;
 
 }
-
+html, body {
+  zoom: 90%;
+}
 
 select {
   background-color: #1a202c; /* Dark background */
@@ -137,6 +139,9 @@ option {
 
   .chat-bubble::after, .chat-bubble-dollar::after {
     left: 66px; /* Adjust for smaller screens */
+  }
+  html, body {
+    zoom: 100%;
   }
 }
 /* Add this to your global CSS or in a style module for the header */
