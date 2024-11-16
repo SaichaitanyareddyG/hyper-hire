@@ -52,7 +52,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* Menu Button - Visible on Mobile */}
-      <div className="flex md:hidden">
+      <div className="flex md:hidden ml-[140px]">
         <button
           className="text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
