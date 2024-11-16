@@ -26,7 +26,7 @@ const LeftSide: React.FC = () => {
     <div className="flex flex-col space-y-4 w-full md:w-1/2">
       {/* Step 1 */}
       <div
-          className={`relative lg:bg-[#E9F7EF] max-w-48  lg:text-[#40E2E8] text-[white] bg-[#8BC4FF] rounded-lg p-4 shadow-md chat-bubble inline-block`}
+          className={`relative lg:bg-[#E9F7EF] max-w-48  lg:text-[#40E2E8] text-[#40E2E8] bg-[#8BC4FF] rounded-lg p-4 shadow-md chat-bubble inline-block`}
         >
           풀타임, 파트타임
         </div>

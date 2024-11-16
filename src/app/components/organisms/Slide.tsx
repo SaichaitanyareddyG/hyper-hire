@@ -97,7 +97,7 @@ const StaggeredCardCarousel: React.FC<StaggeredCardCarouselProps> = ({cards}) =>
                 transform: 'translateX(-100%) scale(0.92)',
                 zIndex: 1,
                 opacity: 1,
-                width: '360px',
+                width: '320px',
                 left: '60%',
                 height: 'auto'
               };
@@ -115,7 +115,7 @@ const StaggeredCardCarousel: React.FC<StaggeredCardCarouselProps> = ({cards}) =>
                 transform: 'translateX(0%) scale(0.92)',
                 zIndex: 1,
                 opacity: 1,
-                width: '360px',
+                width: '320px',
                 left: '40%',
                 height: 'auto'
               };
