@@ -1,9 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,ReactNode } from "react";
 import Header from "./organisms/header";
 import Footer from "./organisms/Footer";
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+const Layout:React.FC<LayoutProps> = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
