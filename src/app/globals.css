@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(151.17deg, #26c2b9 8.69%, #288be7 126.06% );
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+select {
+  background-color: #1a202c; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 0.5rem 1rem; /* Padding */
+  border-radius: 0.375rem; /* Rounded corners */
+  border: 1px solid #2d3748; /* Border color */
+  appearance: none; /* Remove default arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat; /* No repeat */
+  background-position: right 0.5rem center; /* Position the arrow */
+  background-size: 1rem; /* Size of the arrow */
+}
+
+select:focus {
+  border-color: #4a5568; /* Focus border color */
+  outline: none; /* Remove default outline */
+}
+
+option {
+  background-color: #ffffff; /* White background for options */
+  color: #1a202c; /* Dark text for options */
+}
+
+.moving-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.moving-divs {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.moving-div {
+  flex-shrink: 0;
+  margin-right: 24px; /* Gap between divs */
+  border-radius: 12px;
+}
+
+
+
+
+.mobile {
+  background-color: #8BC4FF;
+}
+
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.5s; /* Adjust the duration as needed */
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.fade-in-delay {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.7s; /* 0.5s duration with 0.7s delay */
+}
+
+.b-lurred {
+  filter: blur(5px);  /* Adjust the blur value as needed */
+  transition: filter 0.3s ease-in-out;
+}
+
+.chat-bubble, .chat-bubble-dollar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 27px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  position: relative; /* Ensure the pseudo-element positions correctly */
+  display: inline-block; /* Ensure the bubble sizes correctly */
+  padding: 10px 20px; /* Add some padding for better appearance */
+  border-radius: 8px; /* Rounded corners for the bubble */
+  background-color: #ffffff; /* Background color for the chat bubble */
+}
+
+.chat-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; 
+  left: 20px; /* Adjust based on the width of the bubble */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ffffff; 
+}
+
+.chat-bubble-dollar::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; 
+  left: 70px; /* Adjust based on the width of the bubble */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #E9F7EF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chat-bubble, .chat-bubble-dollar {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+  }
+
+  .chat-bubble::after, .chat-bubble-dollar::after {
+    left: 66px; /* Adjust for smaller screens */
+  }
+}
+/* Add this to your global CSS or in a style module for the header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;  /* Ensures the header stays above other content */
+}
+
+
+.card {
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.card.active {
+  transform: scale(1) translateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card.inactive {
+  transform: scale(0.92) translateY(6%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInAfter500ms {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeInAfter500ms {
+  animation: fadeInAfter500ms 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-delay {
+  animation: fadeIn 500ms ease-in-out forwards;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0ms;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 100ms;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 200ms;
+}
